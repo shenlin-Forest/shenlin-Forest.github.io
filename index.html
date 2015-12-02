@@ -219,7 +219,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="JSONP实现跨域">JSONP实现跨域</h2><p>JSONP就是JSON+padding,就是把JSON填充到一个盒子中，或者说是填充到一个函数中。JSONP和JSON的区别就是JSONP是包含在函数调用中的JSON。</p>
-<p>由于同源策略的限制，XmlHttpRequest对象只允许请求当前源（域名、协议、端口）的资源。为了实现跨域请求，这里使用到了<script>标签。<script>和<img>这两个标签很神奇，都有能力不受限制地从其他域中加载资源。JSONP的基本原理就是：动态地插入<script>标签，在url参数中指定一个回调函数，并且将我们需要的JSON数据作为参数传入。</p>
+<p>由于同源策略的限制，XmlHttpRequest对象只允许请求当前源（域名、协议、端口）的资源。为了实现跨域请求，这里使用到了script标签。script和img这两个标签很神奇，都有能力不受限制地从其他域中加载资源。JSONP的基本原理就是：动态地插入script标签，在url参数中指定一个回调函数，并且将我们需要的JSON数据作为参数传入。</p>
 <p>下面来看代码：</p>
 <ul>
 <li>JS:</li>
@@ -230,9 +230,9 @@
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    type : <span class="string">'GET'</span> ,<span class="comment">// jsonp类型下，只能使用GET请求</span></span><br><span class="line">    url : <span class="string">" "</span>, <span class="comment">// 要跨的域</span></span><br><span class="line">    dataType : <span class="string">"jsonp"</span>, <span class="comment">//指定为jsonp类型</span></span><br><span class="line">    data : &#123;<span class="string">"name"</span>:<span class="string">"jay"</span>&#125;, <span class="comment">// 数据参数</span></span><br><span class="line">    jsonp : <span class="string">"callbackparam"</span>, <span class="comment">// 回调函数名的参数名</span></span><br><span class="line">    jsonpCallback : <span class="string">"success_jsoncallback"</span>, <span class="comment">// 回调函数名</span></span><br><span class="line">    success : <span class="function"><span class="keyword">function</span>(<span class="params">json</span>)</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    error : <span class="function"><span class="keyword">function</span>(<span class="params">xhr</span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>参考文章：</p>
-<p><a href="http://www.cnblogs.com/lemontea/archive/2012/12/11/2812268.html">第一篇</a></p>
-<p><a href="http://blog.csdn.net/zx13525079024/article/details/19474733">第二篇</a></p>
-</script></p>
+<p><a href="http://www.cnblogs.com/lemontea/archive/2012/12/11/2812268.html" target="_blank" rel="external">第一篇</a></p>
+<p><a href="http://blog.csdn.net/zx13525079024/article/details/19474733" target="_blank" rel="external">第二篇</a></p>
+
       
     </div>
     
@@ -304,7 +304,7 @@
 <ul>
 <li>Apache:</li>
 </ul>
-<p>Apache设置需要通过使用mod_headers模块来激活HTTP头的设置，它默认是激活的。你只需要爱Apache配置文件的<directory>、<location>、<files>或<virtualhost>的配置里加入以下内容即可：</virtualhost></files></location></directory></p>
+<p>Apache设置需要通过使用mod_headers模块来激活HTTP头的设置，它默认是激活的。你只需要爱Apache配置文件的Directory、Location、Files或VirtualHost的配置里加入以下内容即可：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Header set Access-Control-Allow-Origin *</span><br></pre></td></tr></table></figure>
 <ul>
 <li>PHP:</li>
