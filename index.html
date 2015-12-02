@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a>
+						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a>
 					</div>
 				</section>
 				
@@ -191,6 +191,74 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-简要概述JSONP跨域" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/02/简要概述JSONP跨域/" class="article-date">
+  	<time datetime="2015-12-02T13:07:08.000Z" itemprop="datePublished">2015-12-02</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/02/简要概述JSONP跨域/">简要概述JSONP跨域</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JSONP实现跨域">JSONP实现跨域</h2><p>JSONP就是JSON+padding,就是把JSON填充到一个盒子中，或者说是填充到一个函数中。JSONP和JSON的区别就是JSONP是包含在函数调用中的JSON。</p>
+<p>由于同源策略的限制，XmlHttpRequest对象只允许请求当前源（域名、协议、端口）的资源。为了实现跨域请求，这里使用到了\<script>标签。\<script>和\<img>这两个标签很神奇，都有能力不受限制地从其他域中加载资源。JSONP的基本原理就是：动态地插入\<script>标签，在url参数中指定一个回调函数，并且将我们需要的JSON数据作为参数传入。</p>
+<p>下面来看代码：</p>
+<ul>
+<li>JS:</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;button id="btn"&gt;点我&lt;/button&gt;</span><br><span class="line">&lt;script type="text/javascript"&gt;</span><br><span class="line">     // 动态插入script标签</span><br><span class="line">    function createScript(src)&#123;</span><br><span class="line">        oScript = document.createElement("script");</span><br><span class="line">        oScript.type = "text/javascript";</span><br><span class="line">        oScript.src = src;</span><br><span class="line">        document.getElementsByTagName("head")[0].appendChild(oScript); </span><br><span class="line">    &#125;</span><br><span class="line">    // 定义回调函数，并将我们需要的JSON数据作为参数传入</span><br><span class="line">    function jsoncallback(json)&#123;</span><br><span class="line">        // 对JSON数据进行操作</span><br><span class="line">    &#125;</span><br><span class="line">    // 触发事件</span><br><span class="line">    document.getElementById('btn').onclick=function()&#123;</span><br><span class="line">    createScript("http://localhost/52335/somejson?callback=jsoncallback")</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>jQuery</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    type : <span class="string">'GET'</span> ,<span class="comment">// jsonp类型下，只能使用GET请求</span></span><br><span class="line">    url : <span class="string">" "</span>, <span class="comment">// 要跨的域</span></span><br><span class="line">    dataType : <span class="string">"jsonp"</span>, <span class="comment">//指定为jsonp类型</span></span><br><span class="line">    data : &#123;<span class="string">"name"</span>:<span class="string">"jay"</span>&#125;, <span class="comment">// 数据参数</span></span><br><span class="line">    jsonp : <span class="string">"callbackparam"</span>, <span class="comment">// 回调函数名的参数名</span></span><br><span class="line">    jsonpCallback : <span class="string">"success_jsoncallback"</span>, <span class="comment">// 回调函数名</span></span><br><span class="line">    success : <span class="function"><span class="keyword">function</span>(<span class="params">json</span>)</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    error : <span class="function"><span class="keyword">function</span>(<span class="params">xhr</span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>参考文章：</p>
+<p><a href="http://www.cnblogs.com/lemontea/archive/2012/12/11/2812268.html">第一篇</a></p>
+<p><a href="http://blog.csdn.net/zx13525079024/article/details/19474733">第二篇</a></p>
+</script></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSONP/">JSONP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web常见知识点/">web常见知识点</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-简介CORS-跨域资源共享" class="article article-type-post" itemscope itemprop="blogPost">
   
