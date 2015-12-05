@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/总结/" style="font-size: 15px;">总结</a> <a href="/tags/模块打包/" style="font-size: 10px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
+						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/javascript/" style="font-size: 15px;">javascript</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/总结/" style="font-size: 15px;">总结</a> <a href="/tags/模块打包/" style="font-size: 15px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
 					</div>
 				</section>
 				
@@ -191,6 +191,105 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-CSS盒模型和display属性" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/24/CSS盒模型和display属性/" class="article-date">
+  	<time datetime="2015-11-23T16:08:37.000Z" itemprop="datePublished">2015-11-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/24/CSS盒模型和display属性/">CSS盒模型和display属性</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这个知识点在面试中经常会问到，看了一下别人的文章，现在综合总结一下。<br>HTML组件中呈现一片空白区域的组件都可当盒模型（box modal），而CSS则提供了display属性来控制盒模型的外观。</p>
+<h2 id="基本的盒模型">基本的盒模型</h2><h3 id="block类型（块）:">block类型（块）:</h3><p>这种盒模型的组件默认<strong>占据一行</strong>，<strong>允许通过CSS设置宽带、高度</strong>。例如：<div..>、 <p..>、\<form..>、\<table.. 、\<h1="">到\<h6>\<ul..>等。</ul..></h6></table..></form..></p..></div..></p>
+<h3 id="inline类型（内联）：">inline类型（内联）：</h3><p>这种盒模型的组件<strong>不会占据一行</strong>，<strong>不可以调整高度</strong>。例如：\<span..>、\<a..> \<strong..>、\<em..>、\<label..>、\<input..>、\<select..>、\<textarea..>、\<img..>、\<br..>元素</br..></img..></textarea..></select..></input..></label..></em..></strong..></a..></span..></p>
+<p>CSS为display属性提供了block、inline两个属性值，可以改变HTML组件默认的盒模型。</p>
+<h3 id="inline-block类型">inline-block类型</h3><p>CSS还提供了一种inline-block盒模型，这种盒模型时inline模型和block模型的综合体：inline-block盒模型的元素<strong>不会占据一行</strong>，<strong>同时也支持width、height指定指定宽带及高度</strong>。并且允许它的左边和右边出现其他内容。  </p>
+<h3 id="细节对比"><strong>细节对比</strong></h3><ul>
+<li><p>display：block</p>
+<ol>
+<li>block 元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度会自动填满其父元素的宽度。</li>
+<li>block元素可以设置width,height属性。块级元素及时设置了宽度，仍然是独占一行。</li>
+<li>block元素可以设置margin和padding属性。</li>
+</ol>
+</li>
+<li><p>display：inline</p>
+<ol>
+<li>inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</li>
+<li>inline元素设置width,height均无效。</li>
+<li>inline元素的margin和padding属性，水平方向的padding-left、padding-right、margin-left、margin-right都产生边距效果，但竖直方向上的padding-top、padding-bottom、margin-top和margin-bottom不会产生边距效果。（有待商榷）</li>
+</ol>
+</li>
+<li><p>display:inline-block</p>
+<ol>
+<li>简单来说就是<strong>将对象呈现为inline对象，但是对象的内容作为block对象呈现</strong>。之后的内联元素会被排列在同一行内。比如可以给一个link（\<a>元素)inline-block属性，使其<strong>既有block的宽度高度特性、又具有inline的可同行性</strong>。</a></li>
+</ol>
+</li>
+</ul>
+<p><em>应用场合</em>：</p>
+<p>很多时候我们必须让一些块元素并排显示，一般会想到浮动，但是块元素浮动设边距的时候在IE下会出现加倍的BUG，所以很多时候不得不把这个块元素套在一个内联元素里，然后给这个内敛元素浮动和边距。通过设置：display：inline-block，就将对象呈递为内联对象，但对象的内容作为块对象呈递。旁边的内联对象会被呈递在同一行内，允许空格。</p>
+<h3 id="说明">说明</h3><ol>
+<li>block元素可以包含block元素和inline元素，但inline元素只能包含inline元素。要注意这个是一个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如P元素，只能包含inline元素，而不能包含block元素。</li>
+<li>一般来说，可以通过display:inline和display：block的设置来改变元素的布局级别。</li>
+<li><strong>兼容性问题</strong>：IE6、IE7<strong>不支持</strong>inline-block，所以在IE中对内联元素使用display：inline-block理论上IE是不识别的，但会在IE下触发layout，从而使内联元素拥有了display：inline-block属性的表象。</li>
+</ol>
+<p>解决IE6、IE7兼容性的方法：</p>
+<ol>
+<li><p>首先设置inline-block触发块元素，具有了layout的特性，然后设置display:inline使块元素呈现内联元素，此时layout的特性不会消失。</p>
+</li>
+<li><p>直接设置display：inline，使用zoom:1触发layout。</p>
+</li>
+</ol>
+<p>兼容所有浏览器的方法是：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.selector &#123;</span><br><span class="line">	display : inline-block;</span><br><span class="line">	*display : inine;</span><br><span class="line">	*zoom:1;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>本文只列出了display常见的三个属性，除此之外，display的属性值还有：inline-table、和表格相关的盒模型、list-item、run-in等。</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web常见知识点/">web常见知识点</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
   
