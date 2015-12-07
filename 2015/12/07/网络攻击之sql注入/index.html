@@ -3,17 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 跨域问题 | Shenlin&#39;s Blog</title>
+  <title>网络攻击之sql注入 | Shenlin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shenlin's Blog">
-<meta property="og:url" content="http://yoursite.com/tags/跨域问题/index.html">
+  <meta name="description" content="今天看到了一篇关于sql注入的不错的博文，正好也复习到这里了，就以此为主题记录一下。
+移步原文
+sql注入就是把sql命令插入到web表单递交或输入域名或页面请求查询字符串，最终达到欺骗服务器来执行恶意的SQL命令。
+首先让我们了解什么时候可能发生SQL Injection。
+假设我们在浏览器中输入URL www.sample.com，由于它只是对页面的简单请求无需对数据库动进行动态请求，所以它不">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络攻击之sql注入">
+<meta property="og:url" content="http://yoursite.com/2015/12/07/网络攻击之sql注入/index.html">
 <meta property="og:site_name" content="Shenlin's Blog">
-<meta property="og:description">
+<meta property="og:description" content="今天看到了一篇关于sql注入的不错的博文，正好也复习到这里了，就以此为主题记录一下。
+移步原文
+sql注入就是把sql命令插入到web表单递交或输入域名或页面请求查询字符串，最终达到欺骗服务器来执行恶意的SQL命令。
+首先让我们了解什么时候可能发生SQL Injection。
+假设我们在浏览器中输入URL www.sample.com，由于它只是对页面的简单请求无需对数据库动进行动态请求，所以它不">
+<meta property="og:updated_time" content="2015-12-07T10:00:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shenlin's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="网络攻击之sql注入">
+<meta name="twitter:description" content="今天看到了一篇关于sql注入的不错的博文，正好也复习到这里了，就以此为主题记录一下。
+移步原文
+sql注入就是把sql命令插入到web表单递交或输入域名或页面请求查询字符串，最终达到欺骗服务器来执行恶意的SQL命令。
+首先让我们了解什么时候可能发生SQL Injection。
+假设我们在浏览器中输入URL www.sample.com，由于它只是对页面的简单请求无需对数据库动进行动态请求，所以它不">
   
     <link rel="alternative" href="/atom.xml" title="Shenlin&#39;s Blog" type="application/atom+xml">
   
@@ -190,53 +203,113 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-网络攻击之sql注入" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/12/04/系统总结javascript跨域/" class="archive-article-date">
-  	<time datetime="2015-12-04T15:16:23.000Z" itemprop="datePublished">12月 4</time>
+    <div class="article-meta">
+      <a href="/2015/12/07/网络攻击之sql注入/" class="article-date">
+  	<time datetime="2015-12-07T09:53:02.000Z" itemprop="datePublished">2015-12-07</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/12/04/系统总结javascript跨域/">系统总结javascript跨域</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      网络攻击之sql注入
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web常见知识点/">web常见知识点</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨域问题/">跨域问题</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql注入/">sql注入</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络攻击/">网络攻击</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天看到了一篇关于sql注入的不错的博文，正好也复习到这里了，就以此为主题记录一下。</p>
+<p><a href="http://www.cnblogs.com/rush/archive/2011/12/31/2309203.html" target="_blank" rel="external">移步原文</a></p>
+<p>sql注入就是把sql命令插入到web表单递交或输入域名或页面请求查询字符串，最终达到欺骗服务器来执行恶意的SQL命令。</p>
+<p>首先让我们了解什么时候可能发生SQL Injection。</p>
+<p>假设我们在浏览器中输入URL www.sample.com，由于它只是对页面的简单请求无需对数据库动进行动态请求，所以它不存在SQL Injection，当我们输入www.sample.com?testid=23时，我们在URL中传递变量testid，并且提供值为23，由于它是对数据库进行动态查询的请求（其中?testid＝23表示数据库查询变量），所以我们可以该URL中嵌入恶意SQL语句。</p>
+<p>防止SQL注入的方法：</p>
+<p>1.永远不要信任用户的输入，要对用户的输入进行校验，可以通过正则表达式，或限制长度，对单引号和双”-“进行转换等。</p>
+<p>2.永远不要使用动态拼装SQL，可以使用参数化的SQL或者直接使用存储过程进行数据查询存取。</p>
+<p>3.永远不要使用管理员权限的数据库连接，为每个应用使用单独的权限有限的数据库连接。</p>
+<p>4.不要把机密信息明文存放，请加密或者hash掉密码和敏感的信息。</p>
+<p>5.应用的异常信息应该给出尽可能少的提示，最好使用自定义的错误信息对原始错误信息进行包装，把异常信息存放在独立的表中。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/07/jQuery插件：jqzoom/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jQuery插件：jqzoom</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="网络攻击之sql注入" data-title="网络攻击之sql注入" data-url="http://yoursite.com/2015/12/07/网络攻击之sql注入/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"shenlin-notes"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -262,9 +335,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
