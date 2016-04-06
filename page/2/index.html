@@ -192,6 +192,70 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-href-与javascript-void-0-的区别" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/30/href-与javascript-void-0-的区别/" class="article-date">
+  	<time datetime="2015-11-30T04:11:30.000Z" itemprop="datePublished">2015-11-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/30/href-与javascript-void-0-的区别/"> href=# 与javascript:void(0)的区别</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="href=”#”_与javascript:void(0)的区别">href=”#” 与javascript:void(0)的区别</h2><p>在工作中，如果我们想把a标签的链接设置成空链接，一般会用两种方法：</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span>点击我<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre>
+<p>或者</p>
+<pre><code class="html"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"javascript:void(0)"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span>点击我<span class="tag">&lt;/<span class="title">a</span>&gt;</span>
+</code></pre>
+<p>这两个方法是有区别的，现在来了解一下：</p>
+<h3 id="href=”#”方法：">href=”#”方法：</h3><p>效果：点击后会自动跳转到页面的最上面<br>原因：用这个方法相当于点击了一个锚点，但是这个锚点没有ID，所以就默认跳转到页面的顶部。</p>
+<h3 id="href=”javascript:void(0)”方法：">href=”javascript:void(0)”方法：</h3><p>效果：空链接；点击链接后不执行任何操作<br>原因：void是一个操作符，这个操作符指定要计算一个表达式但是不返回值。如果在void中写入0（即void(0)）,则什么也不执行，从而也就形成了一个空链接。</p>
+<h3 id="两者区别：">两者区别：</h3><p>#方法会跳转到页面的顶部，并且在页面的url后面出现#，而javascript:void(0)方法不会，所以如果是空链接的话，还是推荐用href=”javascript:void(0);”</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web常见知识点/">web常见知识点</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-工作经验交流会总结" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -690,7 +754,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015 申琳
+    		&copy; 2016 申琳
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
