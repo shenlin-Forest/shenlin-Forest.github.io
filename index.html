@@ -192,6 +192,45 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-二分查找的js实现" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/07/二分查找的js实现/" class="article-date">
+  	<time datetime="2016-04-07T03:09:55.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="二分查找的js实现">二分查找的js实现</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * [binarySearch 二分查找]</span><br><span class="line"> * @param  &#123;[type]&#125; value      [查找元素]</span><br><span class="line"> * @param  &#123;[type]&#125; arr        [数组]</span><br><span class="line"> * @param  &#123;[type]&#125; startIndex [开始索引,默认是0]</span><br><span class="line"> * @param  &#123;[type]&#125; endIndex   [结束索引，默认是最后一位]</span><br><span class="line"> * @return &#123;[type]&#125;            [返回查找元素的索引]</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归实现</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch1</span>(<span class="params">value,arr,startIndex,endIndex</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!value || !(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>)) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length,</span><br><span class="line">        startIndex = <span class="keyword">typeof</span> startIndex === <span class="string">"number"</span> ? startIndex : <span class="number">0</span>,</span><br><span class="line">        endIndex   = <span class="keyword">typeof</span> endIndex   === <span class="string">"number"</span> ? endIndex   : len-<span class="number">1</span>,</span><br><span class="line">        midIndex   = <span class="built_in">Math</span>.floor((startIndex + endIndex) / <span class="number">2</span>),</span><br><span class="line">        midval     = arr[midIndex];</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span>(startIndex &gt; endIndex) <span class="keyword">return</span> ;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span>(midval === value)&#123;</span><br><span class="line">        <span class="keyword">return</span> midIndex;</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (midval &gt; value) &#123;</span><br><span class="line">        <span class="keyword">return</span> binarySearch1(value, arr, startIndex, midIndex - <span class="number">1</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> binarySearch1(value, arr, midIndex + <span class="number">1</span>, endIndex);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 非递归实现</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch2</span>(<span class="params">value,arr,startIndex,endIndex</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!value || !(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>)) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">var</span> len = arr.length;</span><br><span class="line">	    startIndex = <span class="keyword">typeof</span> startIndex ===<span class="string">'number'</span> ? startIndex : <span class="number">0</span>,</span><br><span class="line">	    endIndex = <span class="keyword">typeof</span> endIndex === <span class="string">'number'</span> ? endIndex : len-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (startIndex &lt;= endIndex)&#123;</span><br><span class="line">	    midIndex = <span class="built_in">Math</span>.floor((startIndex + endIndex)/<span class="number">2</span>),</span><br><span class="line">	    midval = arr[midIndex];		    	</span><br><span class="line">	    	<span class="keyword">if</span>(midval == value) &#123;</span><br><span class="line">	    		<span class="keyword">return</span> midIndex;</span><br><span class="line">	    	&#125;</span><br><span class="line">	    	<span class="keyword">else</span> <span class="keyword">if</span>(midval &gt; value)&#123;</span><br><span class="line">	    		endIndex = midIndex-<span class="number">1</span>;</span><br><span class="line">	    	&#125;</span><br><span class="line">	    	<span class="keyword">else</span> &#123;</span><br><span class="line">	    		startIndex = midIndex+<span class="number">1</span>;</span><br><span class="line">	    	&#125;</span><br><span class="line">	    	</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(binarySearch1(<span class="number">3</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]));<span class="comment">//2</span></span><br><span class="line"><span class="built_in">console</span>.log(binarySearch2(<span class="number">3</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]));<span class="comment">//2</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-腾讯笔试练习题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -683,74 +722,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web常见知识点/">web常见知识点</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨域问题/">跨域问题</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-简要概述JSONP跨域" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/02/简要概述JSONP跨域/" class="article-date">
-  	<time datetime="2015-12-02T13:07:08.000Z" itemprop="datePublished">2015-12-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/02/简要概述JSONP跨域/">简要概述JSONP跨域</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JSONP实现跨域">JSONP实现跨域</h2><p>JSONP就是JSON+padding,就是把JSON填充到一个盒子中，或者说是填充到一个函数中。JSONP和JSON的区别就是JSONP是包含在函数调用中的JSON。</p>
-<p>由于同源策略的限制，XmlHttpRequest对象只允许请求当前源（域名、协议、端口）的资源。为了实现跨域请求，这里使用到了script标签。script和img这两个标签很神奇，都有能力不受限制地从其他域中加载资源。JSONP的基本原理就是：动态地插入script标签，在url参数中指定一个回调函数，并且将我们需要的JSON数据作为参数传入。</p>
-<p>下面来看代码：</p>
-<ul>
-<li>JS:</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">button</span> <span class="attribute">id</span>=<span class="value">"btn"</span>&gt;</span>点我<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line">     <span class="comment">// 动态插入script标签</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">createScript</span>(<span class="params">src</span>)</span>&#123;</span><br><span class="line">        oScript = <span class="built_in">document</span>.createElement(<span class="string">"script"</span>);</span><br><span class="line">        oScript.type = <span class="string">"text/javascript"</span>;</span><br><span class="line">        oScript.src = src;</span><br><span class="line">        <span class="built_in">document</span>.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(oScript); </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 定义回调函数，并将我们需要的JSON数据作为参数传入</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">jsoncallback</span>(<span class="params">json</span>)</span>&#123;</span><br><span class="line">        <span class="comment">// 对JSON数据进行操作</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 触发事件</span></span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>).onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    createScript(<span class="string">"http://localhost/52335/somejson?callback=jsoncallback"</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>jQuery</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">    type : <span class="string">'GET'</span> ,<span class="comment">// jsonp类型下，只能使用GET请求</span></span><br><span class="line">    url : <span class="string">" "</span>, <span class="comment">// 要跨的域</span></span><br><span class="line">    dataType : <span class="string">"jsonp"</span>, <span class="comment">//指定为jsonp类型</span></span><br><span class="line">    data : &#123;<span class="string">"name"</span>:<span class="string">"jay"</span>&#125;, <span class="comment">// 数据参数</span></span><br><span class="line">    jsonp : <span class="string">"callbackparam"</span>, <span class="comment">// 回调函数名的参数名</span></span><br><span class="line">    jsonpCallback : <span class="string">"success_jsoncallback"</span>, <span class="comment">// 回调函数名</span></span><br><span class="line">    success : <span class="function"><span class="keyword">function</span>(<span class="params">json</span>)</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;,</span><br><span class="line">    error : <span class="function"><span class="keyword">function</span>(<span class="params">xhr</span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>参考文章：</p>
-<p><a href="http://www.cnblogs.com/lemontea/archive/2012/12/11/2812268.html" target="_blank" rel="external">第一篇</a></p>
-<p><a href="http://blog.csdn.net/zx13525079024/article/details/19474733" target="_blank" rel="external">第二篇</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSONP/">JSONP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web常见知识点/">web常见知识点</a></li></ul>
 	</div>
 
       
