@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
+						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
 					</div>
 				</section>
 				
@@ -192,6 +192,61 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-js实现数组去重-三种方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/07/js实现数组去重-三种方法/" class="article-date">
+  	<time datetime="2016-04-07T03:18:45.000Z" itemprop="datePublished">2016-04-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/07/js实现数组去重-三种方法/">js实现数组去重-三种方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="js实现数组去重-三种方法">js实现数组去重-三种方法</h3><p>数组去重是一个常见的问题，今天用了三种js方法来实现，直接上代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="comment">//检查当前数组的第i项是否已经保存到了临时数组中，若没有则加入</span></span><br><span class="line">	<span class="built_in">Array</span>.prototype.unique1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> n = [];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.length;i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(n.indexOf(<span class="keyword">this</span>[i])== -<span class="number">1</span>)&#123;</span><br><span class="line">				n.push(<span class="keyword">this</span>[i]);				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">return</span> n;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//检查当前数组的第i项在当前数组中出现的位置是否为i，若不是的话，则是重复项</span></span><br><span class="line">	<span class="built_in">Array</span>.prototype.unique2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> n = [<span class="keyword">this</span>[<span class="number">0</span>]];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;<span class="keyword">this</span>.length;i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(<span class="keyword">this</span>.indexOf(<span class="keyword">this</span>[i] == i))&#123;</span><br><span class="line">				n.push(<span class="keyword">this</span>[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> n;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//定义一个哈希表和一个临时数组，若当前项不在哈希表中，则存到哈希表中，并将当前项加入临时数组中</span></span><br><span class="line">	<span class="comment">//这个有问题，没效果</span></span><br><span class="line">	<span class="built_in">Array</span>.prototype.unique3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;		<span class="keyword">var</span> n = &#123;&#125;, r = [];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.length;i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(!n[<span class="keyword">this</span>[i]])&#123;</span><br><span class="line">				n[<span class="keyword">this</span>[i]] = <span class="literal">true</span>;</span><br><span class="line">				r.push(<span class="keyword">this</span>[i]);				</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> r;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> arr = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">23</span>,<span class="number">0</span>,<span class="number">34</span>,<span class="number">1</span>,<span class="number">1</span>];</span><br><span class="line">	<span class="built_in">console</span>.log(arr.unique1());</span><br><span class="line">	<span class="built_in">console</span>.log(arr.unique2());</span><br><span class="line">	<span class="built_in">console</span>.log(arr.unique3());</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-二分查找的js实现" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -210,56 +265,6 @@
   
     <h1 itemprop="name">
       <a class="article-title" href="/2016/04/07/二分查找的js实现/">二分查找的js实现</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="二分查找的js实现">二分查找的js实现</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * [binarySearch 二分查找]</span><br><span class="line"> * @param  &#123;[type]&#125; value      [查找元素]</span><br><span class="line"> * @param  &#123;[type]&#125; arr        [数组]</span><br><span class="line"> * @param  &#123;[type]&#125; startIndex [开始索引,默认是0]</span><br><span class="line"> * @param  &#123;[type]&#125; endIndex   [结束索引，默认是最后一位]</span><br><span class="line"> * @return &#123;[type]&#125;            [返回查找元素的索引]</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归实现</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch1</span>(<span class="params">value,arr,startIndex,endIndex</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!value || !(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>)) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">var</span> len = arr.length,</span><br><span class="line">        startIndex = <span class="keyword">typeof</span> startIndex === <span class="string">"number"</span> ? startIndex : <span class="number">0</span>,</span><br><span class="line">        endIndex   = <span class="keyword">typeof</span> endIndex   === <span class="string">"number"</span> ? endIndex   : len-<span class="number">1</span>,</span><br><span class="line">        midIndex   = <span class="built_in">Math</span>.floor((startIndex + endIndex) / <span class="number">2</span>),</span><br><span class="line">        midval     = arr[midIndex];</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span>(startIndex &gt; endIndex) <span class="keyword">return</span> ;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">if</span>(midval === value)&#123;</span><br><span class="line">        <span class="keyword">return</span> midIndex;</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (midval &gt; value) &#123;</span><br><span class="line">        <span class="keyword">return</span> binarySearch1(value, arr, startIndex, midIndex - <span class="number">1</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> binarySearch1(value, arr, midIndex + <span class="number">1</span>, endIndex);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 非递归实现</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch2</span>(<span class="params">value,arr,startIndex,endIndex</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!value || !(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>)) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">var</span> len = arr.length;</span><br><span class="line">	    startIndex = <span class="keyword">typeof</span> startIndex ===<span class="string">'number'</span> ? startIndex : <span class="number">0</span>,</span><br><span class="line">	    endIndex = <span class="keyword">typeof</span> endIndex === <span class="string">'number'</span> ? endIndex : len-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (startIndex &lt;= endIndex)&#123;</span><br><span class="line">	    midIndex = <span class="built_in">Math</span>.floor((startIndex + endIndex)/<span class="number">2</span>),</span><br><span class="line">	    midval = arr[midIndex];		    	</span><br><span class="line">	    	<span class="keyword">if</span>(midval == value) &#123;</span><br><span class="line">	    		<span class="keyword">return</span> midIndex;</span><br><span class="line">	    	&#125;</span><br><span class="line">	    	<span class="keyword">else</span> <span class="keyword">if</span>(midval &gt; value)&#123;</span><br><span class="line">	    		endIndex = midIndex-<span class="number">1</span>;</span><br><span class="line">	    	&#125;</span><br><span class="line">	    	<span class="keyword">else</span> &#123;</span><br><span class="line">	    		startIndex = midIndex+<span class="number">1</span>;</span><br><span class="line">	    	&#125;</span><br><span class="line">	    	</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(binarySearch1(<span class="number">3</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]));<span class="comment">//2</span></span><br><span class="line"><span class="built_in">console</span>.log(binarySearch2(<span class="number">3</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]));<span class="comment">//2</span></span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-二分查找" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/07/二分查找/" class="article-date">
-  	<time datetime="2016-04-07T03:13:44.000Z" itemprop="datePublished">2016-04-07</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/07/二分查找/">二分查找的js实现.md</a>
     </h1>
   
 

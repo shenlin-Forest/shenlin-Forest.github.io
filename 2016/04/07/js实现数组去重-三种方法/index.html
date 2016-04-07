@@ -3,24 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Shenlin&#39;s Blog</title>
+  <title>js实现数组去重-三种方法 | Shenlin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="\$(this)和this的不同
-在jQuery中，\$(this)和this是不一样的，\$(this)返回的的是一个jQuery对象，可以调用jQuery的方法。而this返回的时一个DOM对象，能调用元素属性，比如id、value等。所以如果想表达“当前元素是选中状态”时，应该是this.checked.
-另外要注意的是：在编写插件时，插件内部this指向的是当前通过选择器获取的jQuery">
+  <meta name="description" content="js实现数组去重-三种方法数组去重是一个常见的问题，今天用了三种js方法来实现，直接上代码
+123456789101112131415161718192021222324252627282930313233343536373839&amp;lt;script&amp;gt;	//检查当前数组的第i项是否已经保存到了临时数组中，若没有则加入	Array.prototype.unique1 = function()&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Shenlin's Blog">
-<meta property="og:url" content="http://yoursite.com/2015/11/26/$(this)和this的区别/index.html">
+<meta property="og:title" content="js实现数组去重-三种方法">
+<meta property="og:url" content="http://yoursite.com/2016/04/07/js实现数组去重-三种方法/index.html">
 <meta property="og:site_name" content="Shenlin's Blog">
-<meta property="og:description" content="\$(this)和this的不同
-在jQuery中，\$(this)和this是不一样的，\$(this)返回的的是一个jQuery对象，可以调用jQuery的方法。而this返回的时一个DOM对象，能调用元素属性，比如id、value等。所以如果想表达“当前元素是选中状态”时，应该是this.checked.
-另外要注意的是：在编写插件时，插件内部this指向的是当前通过选择器获取的jQuery">
-<meta property="og:updated_time" content="2015-11-26T15:17:29.000Z">
+<meta property="og:description" content="js实现数组去重-三种方法数组去重是一个常见的问题，今天用了三种js方法来实现，直接上代码
+123456789101112131415161718192021222324252627282930313233343536373839&amp;lt;script&amp;gt;	//检查当前数组的第i项是否已经保存到了临时数组中，若没有则加入	Array.prototype.unique1 = function()&amp;">
+<meta property="og:updated_time" content="2016-04-07T03:22:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shenlin's Blog">
-<meta name="twitter:description" content="\$(this)和this的不同
-在jQuery中，\$(this)和this是不一样的，\$(this)返回的的是一个jQuery对象，可以调用jQuery的方法。而this返回的时一个DOM对象，能调用元素属性，比如id、value等。所以如果想表达“当前元素是选中状态”时，应该是this.checked.
-另外要注意的是：在编写插件时，插件内部this指向的是当前通过选择器获取的jQuery">
+<meta name="twitter:title" content="js实现数组去重-三种方法">
+<meta name="twitter:description" content="js实现数组去重-三种方法数组去重是一个常见的问题，今天用了三种js方法来实现，直接上代码
+123456789101112131415161718192021222324252627282930313233343536373839&amp;lt;script&amp;gt;	//检查当前数组的第i项是否已经保存到了临时数组中，若没有则加入	Array.prototype.unique1 = function()&amp;">
   
     <link rel="alternative" href="/atom.xml" title="Shenlin&#39;s Blog" type="application/atom+xml">
   
@@ -197,11 +194,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-$(this)和this的区别" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-js实现数组去重-三种方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/26/$(this)和this的区别/" class="article-date">
-  	<time datetime="2015-11-26T15:17:29.000Z" itemprop="datePublished">2015-11-26</time>
+      <a href="/2016/04/07/js实现数组去重-三种方法/" class="article-date">
+  	<time datetime="2016-04-07T03:18:45.000Z" itemprop="datePublished">2016-04-07</time>
 </a>
     </div>
   
@@ -210,12 +207,32 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js实现数组去重-三种方法
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>\$(this)和this的不同</p>
-<p>在jQuery中，\$(this)和this是不一样的，\$(this)返回的的是一个jQuery对象，可以调用jQuery的方法。而this返回的时一个DOM对象，能调用元素属性，比如id、value等。所以如果想表达“当前元素是选中状态”时，应该是this.checked.</p>
-<p>另外要注意的是：在编写插件时，插件内部this指向的是当前通过选择器获取的jQuery对象，而不是一般的方法那样指向的是DOM对象。</p>
-
+        <h3 id="js实现数组去重-三种方法">js实现数组去重-三种方法</h3><p>数组去重是一个常见的问题，今天用了三种js方法来实现，直接上代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="comment">//检查当前数组的第i项是否已经保存到了临时数组中，若没有则加入</span></span><br><span class="line">	<span class="built_in">Array</span>.prototype.unique1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> n = [];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.length;i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(n.indexOf(<span class="keyword">this</span>[i])== -<span class="number">1</span>)&#123;</span><br><span class="line">				n.push(<span class="keyword">this</span>[i]);				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">return</span> n;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//检查当前数组的第i项在当前数组中出现的位置是否为i，若不是的话，则是重复项</span></span><br><span class="line">	<span class="built_in">Array</span>.prototype.unique2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> n = [<span class="keyword">this</span>[<span class="number">0</span>]];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">1</span>;i&lt;<span class="keyword">this</span>.length;i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(<span class="keyword">this</span>.indexOf(<span class="keyword">this</span>[i] == i))&#123;</span><br><span class="line">				n.push(<span class="keyword">this</span>[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> n;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//定义一个哈希表和一个临时数组，若当前项不在哈希表中，则存到哈希表中，并将当前项加入临时数组中</span></span><br><span class="line">	<span class="comment">//这个有问题，没效果</span></span><br><span class="line">	<span class="built_in">Array</span>.prototype.unique3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;		<span class="keyword">var</span> n = &#123;&#125;, r = [];</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.length;i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(!n[<span class="keyword">this</span>[i]])&#123;</span><br><span class="line">				n[<span class="keyword">this</span>[i]] = <span class="literal">true</span>;</span><br><span class="line">				r.push(<span class="keyword">this</span>[i]);				</span><br><span class="line">				&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> r;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> arr = [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">23</span>,<span class="number">0</span>,<span class="number">34</span>,<span class="number">1</span>,<span class="number">1</span>];</span><br><span class="line">	<span class="built_in">console</span>.log(arr.unique1());</span><br><span class="line">	<span class="built_in">console</span>.log(arr.unique2());</span><br><span class="line">	<span class="built_in">console</span>.log(arr.unique3());</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -224,18 +241,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/11/27/工作经验交流会总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          工作经验交流会总结
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/25/随笔/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">随笔</div>
+    <a href="/2016/04/07/二分查找的js实现/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二分查找的js实现</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -264,7 +272,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="$(this)和this的区别" data-title="" data-url="http://yoursite.com/2015/11/26/$(this)和this的区别/"></div>
+	<div class="ds-thread" data-thread-key="js实现数组去重-三种方法" data-title="js实现数组去重-三种方法" data-url="http://yoursite.com/2016/04/07/js实现数组去重-三种方法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
