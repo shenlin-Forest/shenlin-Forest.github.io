@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016/4 | Shenlin&#39;s Blog</title>
+  <title>Shenlin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
+  <meta name="description" content="腾讯笔试练习题：填充代码，使mySort能使传入的参数按照从小到大的顺序显示出来12345678910111213141516171819&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;	function mySort()&amp;#123;		var tags = new Array();		//你的代码		for(var i=0;i&amp;lt;arguments.length;i">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Shenlin's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2016/04/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/04/07/腾讯笔试练习题/index.html">
 <meta property="og:site_name" content="Shenlin's Blog">
-<meta property="og:description">
+<meta property="og:description" content="腾讯笔试练习题：填充代码，使mySort能使传入的参数按照从小到大的顺序显示出来12345678910111213141516171819&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;	function mySort()&amp;#123;		var tags = new Array();		//你的代码		for(var i=0;i&amp;lt;arguments.length;i">
+<meta property="og:updated_time" content="2016-04-07T01:22:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shenlin's Blog">
-<meta name="twitter:description">
+<meta name="twitter:description" content="腾讯笔试练习题：填充代码，使mySort能使传入的参数按照从小到大的顺序显示出来12345678910111213141516171819&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;	function mySort()&amp;#123;		var tags = new Array();		//你的代码		for(var i=0;i&amp;lt;arguments.length;i">
   
     <link rel="alternative" href="/atom.xml" title="Shenlin&#39;s Blog" type="application/atom+xml">
   
@@ -190,64 +191,80 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-腾讯笔试练习题" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/07/腾讯笔试练习题/" class="archive-article-date">
-  	<time datetime="2016-04-07T01:22:56.000Z" itemprop="datePublished">4月 7</time>
+    <div class="article-meta">
+      <a href="/2016/04/07/腾讯笔试练习题/" class="article-date">
+  	<time datetime="2016-04-07T01:22:56.000Z" itemprop="datePublished">2016-04-07</time>
 </a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="腾讯笔试练习题：">腾讯笔试练习题：</h2><h3 id="填充代码，使mySort能使传入的参数按照从小到大的顺序显示出来">填充代码，使mySort能使传入的参数按照从小到大的顺序显示出来</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">mySort</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> tags = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"></span><br><span class="line">		<span class="comment">//你的代码</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="built_in">arguments</span>.length;i++)&#123;</span><br><span class="line">			tags.push(<span class="built_in">arguments</span>[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		tags.sort(<span class="function"><span class="keyword">function</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> num1-num2;</span><br><span class="line">			<span class="comment">// return num2-num1;//从大到小</span></span><br><span class="line">		&#125;)</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> tags;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> result = mySort(<span class="number">30</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">45</span>,<span class="number">100</span>,<span class="number">27</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(result);</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/06/冒泡、快排和插排的js实现/" class="archive-article-date">
-  	<time datetime="2016-04-06T04:31:15.000Z" itemprop="datePublished">4月 6</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/06/冒泡、快排和插排的js实现/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+  
 </article>
-  
-  
-    </div></section>
-  
 
-    
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="腾讯笔试练习题" data-title="" data-url="http://yoursite.com/2016/04/07/腾讯笔试练习题/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"shenlin-notes"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -273,8 +290,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
