@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
+						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 13.33px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
 					</div>
 				</section>
 				
@@ -191,6 +191,63 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-用js获取网页的一些高度、宽度" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/25/用js获取网页的一些高度、宽度/" class="article-date">
+  	<time datetime="2016-04-25T14:57:37.000Z" itemprop="datePublished">2016-04-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/25/用js获取网页的一些高度、宽度/">用js获取网页的一些高度、宽度</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="用js获取网页的一些高度、宽度">用js获取网页的一些高度、宽度</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">网页可见区域宽： <span class="built_in">document</span>.body.clientWidth  </span><br><span class="line">网页可见区域高： <span class="built_in">document</span>.body.clientHeight  </span><br><span class="line">网页可见区域宽： <span class="built_in">document</span>.body.offsetWidth (包括边线的宽)  </span><br><span class="line">网页可见区域高： <span class="built_in">document</span>.body.offsetHeight (包括边线的高)  </span><br><span class="line">网页正文全文宽： <span class="built_in">document</span>.body.scrollWidth  </span><br><span class="line">网页正文全文高： <span class="built_in">document</span>.body.scrollHeight  </span><br><span class="line">网页被卷去的高： <span class="built_in">document</span>.body.scrollTop  </span><br><span class="line">网页被卷去的左： <span class="built_in">document</span>.body.scrollLeft  </span><br><span class="line">网页正文部分上： <span class="built_in">window</span>.screenTop  </span><br><span class="line">网页正文部分左： <span class="built_in">window</span>.screenLeft  </span><br><span class="line">屏幕分辨率的高： <span class="built_in">window</span>.screen.height  </span><br><span class="line">屏幕分辨率的宽： <span class="built_in">window</span>.screen.width  </span><br><span class="line">屏幕可用工作区高度： <span class="built_in">window</span>.screen.availHeight  </span><br><span class="line">屏幕可用工作区宽度： <span class="built_in">window</span>.screen.availWidth  </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 部分jQuery函数  </span></span><br><span class="line">$(<span class="built_in">window</span>).height() 　<span class="comment">//浏览器时下窗口可视区域高度   </span></span><br><span class="line">$(<span class="built_in">document</span>).height()　　　　<span class="comment">//浏览器时下窗口文档的高度   </span></span><br><span class="line">$(<span class="built_in">document</span>.body).height()　　　　　　<span class="comment">//浏览器时下窗口文档body的高度   </span></span><br><span class="line">$(<span class="built_in">document</span>.body).outerHeight(<span class="literal">true</span>)　<span class="comment">//浏览器时下窗口文档body的总高度 包括border padding margin   </span></span><br><span class="line">$(<span class="built_in">window</span>).width() 　<span class="comment">//浏览器时下窗口可视区域宽度   </span></span><br><span class="line">$(<span class="built_in">document</span>).width()<span class="comment">//浏览器时下窗口文档对于象宽度   </span></span><br><span class="line">$(<span class="built_in">document</span>.body).width()　　　　　　<span class="comment">//浏览器时下窗口文档body的高度   </span></span><br><span class="line">$(<span class="built_in">document</span>.body).outerWidth(<span class="literal">true</span>)　<span class="comment">//浏览器时下窗口文档body的总宽度 包括border padding  </span></span><br><span class="line">  </span><br><span class="line">HTML精确定位:scrollLeft,scrollWidth,clientWidth,offsetWidth   </span><br><span class="line">scrollHeight: 获取对象的滚动高度。   </span><br><span class="line">scrollLeft:设置或获取位于对象左边界和窗口中目前可见内容的最左端之间的距离   </span><br><span class="line">scrollTop:设置或获取位于对象最顶端和窗口中可见内容的最顶端之间的距离   </span><br><span class="line">scrollWidth:获取对象的滚动宽度   </span><br><span class="line">offsetHeight:获取对象相对于版面或由父坐标 offsetParent 属性指定的父坐标的高度   </span><br><span class="line">offsetLeft:获取对象相对于版面或由 offsetParent 属性指定的父坐标的计算左侧位置   </span><br><span class="line">offsetTop:获取对象相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置   </span><br><span class="line">event.clientX 相对文档的水平座标   </span><br><span class="line">event.clientY 相对文档的垂直座标   </span><br><span class="line">event.offsetX 相对容器的水平坐标   </span><br><span class="line">event.offsetY 相对容器的垂直坐标   </span><br><span class="line"><span class="built_in">document</span>.documentElement.scrollTop 垂直方向滚动的值   </span><br><span class="line">event.clientX+<span class="built_in">document</span>.documentElement.scrollTop 相对文档的水平座标+垂直方向滚动的量</span><br></pre></td></tr></table></figure>
+<h4 id="应用">应用</h4><p>最近写了个“用绝对定位实现瀑布流布局”的一个demo时，想做这样的一个简单的效果:点击一张图片后，全屏显示该图。黑色遮罩的不透明度是 80%，点击黑色部分退出全屏浏览。那么遮罩层的高度该如何设置呢？其实很简单，只是之前一直在纠结获取最后一个元素的高度，还有（可视区+滚动距离）这两个高度取个最大，其实并不是这样的，和最后一个元素没有什么关系，而应该是设置成网页正文的全文高度：document.body.scrollHeight;就是这么简单,代码如下：</p>
+<p>``` javascript<br>top = document.body.scrollHeight;<br>//网页正文全文高： document.body.scrollHeight<br>model.style.height = top +’px’ ;<br>model.style.display  = ‘block’;</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-原生的Ajax实现" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -669,64 +726,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模块打包/">模块打包</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-RequireJS和Seajs的差异" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/05/RequireJS和Seajs的差异/" class="article-date">
-  	<time datetime="2015-12-05T04:13:16.000Z" itemprop="datePublished">2015-12-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/05/RequireJS和Seajs的差异/">RequireJS和Seajs的差异</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="RequireJS和Seajs的差异">RequireJS和Seajs的差异</h2><p>这两个都是模块加载器，倡导模块化开发理念。核心价值是让JS的模块化开发变得更加简单自然。</p>
-<p>RequireJS是prototype类库；</p>
-<p>SeaJsS是jQuery类库</p>
-<p>其余细节，请移步github<a href="https://github.com/seajs/seajs/issues/277" target="_blank" rel="external">github上的介绍</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RequireJS/">RequireJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SeaJS/">SeaJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模块打包/">模块打包</a></li></ul>
 	</div>
 
       
