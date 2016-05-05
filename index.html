@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 13.33px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
+						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 13.33px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/异步加载，延迟加载/" style="font-size: 10px;">异步加载，延迟加载</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
 					</div>
 				</section>
 				
@@ -191,6 +191,73 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-异步加载和延迟加载" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/05/异步加载和延迟加载/" class="article-date">
+  	<time datetime="2016-05-05T02:48:46.000Z" itemprop="datePublished">2016-05-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/05/异步加载和延迟加载/">异步加载和延迟加载</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="js的异步加载和延迟加载">js的异步加载和延迟加载</h2><p>想起来腾讯TEG面试的时候问到了延迟加载的问题，这里小结一下</p>
+<p>##异步加载</p>
+<p>默认情况下，js是同步加载的。同步加载，又称阻塞模式，会阻止浏览器的后续处理。一般的script标签加载时会阻塞浏览器，即下载执行该js时，后面的标签不会被解析，所以在这个js文件下载完成前，页面不会被渲染，用户看到的是白屏。所以一般的建议是不要把script标签放在head里，而是页面末尾、body结束之前，这样可以减少阻塞行为，让页面先显示出来。</p>
+<h2 id="异步加载的方案">异步加载的方案</h2><p>1.方案1：动态的创建script标签，并插入到document中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">    s.type = <span class="string">'text/javascript'</span>;</span><br><span class="line">    s.src = <span class="string">'... .js'</span>;</span><br><span class="line">    s.async = <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="built_in">document</span>.getElementByTagName(<span class="string">'script'</span>)[<span class="number">0</span>];</span><br><span class="line">    x.parentNode.insertBefore(s,x);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<p>2.方案2：通过ajax去获取js代码，然后通过eval执行</p>
+<p>3.script标签上添加defer属性或者async属性：</p>
+<p>defer属性：defer = “defer”<br>指定脚本在文档加载后执行</p>
+<p>async属性：async = “async”<br>指定脚本异步执行</p>
+<p>4.创建并插入iframe，让它异步执行js</p>
+<h2 id="延迟加载（lasy_loading）">延迟加载（lasy loading）</h2><p>有些js代码并不是页面初始化时就立刻需要的，而是稍后的某些情况才需要。延迟加载就是一开始并不加载这些暂时不用的js，而是需要时或者稍后再通过js的控制来异步加载。</p>
+<p>也即将js分成很多模块，页面初始化时只加载需要立即执行的js，其他的js在第一次需要时再加载。</p>
+<p>比如：图片的延迟加载，在滚动条下拉，图片出现在可视区域内时，才加载显示图片</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/异步加载，延迟加载/">异步加载，延迟加载</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-用js获取网页的一些高度、宽度" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -666,65 +733,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery插件/">jQuery插件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jqzoom/">jqzoom</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-关于webpack" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/05/关于webpack/" class="article-date">
-  	<time datetime="2015-12-05T04:21:26.000Z" itemprop="datePublished">2015-12-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/05/关于webpack/">关于webpack</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="webpack的简介：">webpack的简介：</h2><p><a href="http://segmentfault.com/a/1190000002507327" target="_blank" rel="external">链接跳转</a></p>
-<p>##轻松入门Reach和Webpack</p>
-<p><a href="http://segmentfault.com/a/1190000002767365" target="_blank" rel="external">点我</a></p>
-<p>##webpack入门指迷</p>
-<p><a href="http://segmentfault.com/a/1190000002551952" target="_blank" rel="external">点我</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模块打包/">模块打包</a></li></ul>
 	</div>
 
       
