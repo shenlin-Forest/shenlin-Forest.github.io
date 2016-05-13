@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 13.33px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/异步加载，延迟加载/" style="font-size: 10px;">异步加载，延迟加载</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
+						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 13.33px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/异步加载，延迟加载/" style="font-size: 10px;">异步加载，延迟加载</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
 					</div>
 				</section>
 				
@@ -191,6 +191,76 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-jquery中获取宽度高度方法区别" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/13/jquery中获取宽度高度方法区别/" class="article-date">
+  	<time datetime="2016-05-13T02:21:23.000Z" itemprop="datePublished">2016-05-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/13/jquery中获取宽度高度方法区别/">jquery中获取宽度高度方法区别</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="jQuery中获取宽度高度方法区别">jQuery中获取宽度高度方法区别</h1><p>用jQuery获取宽度和高度的方法是有一些区别的，虽然是小知识点，但容易忽视，特总结一下，一下均以高度举例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">window</span>).height();<span class="comment">//获取当前窗口可视区的高度</span></span><br><span class="line">$(<span class="built_in">document</span>).height();<span class="comment">//获取当前文档高度</span></span><br><span class="line">$(<span class="built_in">document</span>.body).height();<span class="comment">//获取文档body高度</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>jQuery中height()方法获取元素的高度，</p>
+<p> <strong>不包括padding,margin,border</strong></p>
+</li>
+<li><p>jQuery中innerHeight(),</p>
+<p> <strong>包括padding</strong></p>
+</li>
+<li><p>jQuery中outerHeight(),</p>
+<p> <strong>包括padding，border</strong></p>
+</li>
+<li><p>jQuery中outerHeight(true),</p>
+<p> <strong>包括padding,margin,border</strong></p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-简洁HTML5自定义属性dataset" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -670,71 +740,6 @@
     <div class="article-info article-info-index">
       
       
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-网络攻击之sql注入" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/07/网络攻击之sql注入/" class="article-date">
-  	<time datetime="2015-12-07T09:53:02.000Z" itemprop="datePublished">2015-12-07</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/07/网络攻击之sql注入/">网络攻击之sql注入</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天看到了一篇关于sql注入的不错的博文，正好也复习到这里了，就以此为主题记录一下。</p>
-<p><a href="http://www.cnblogs.com/rush/archive/2011/12/31/2309203.html" target="_blank" rel="external">移步原文</a></p>
-<p>sql注入就是把sql命令插入到web表单递交或输入域名或页面请求查询字符串，最终达到欺骗服务器来执行恶意的SQL命令。</p>
-<p>首先让我们了解什么时候可能发生SQL Injection。</p>
-<p>假设我们在浏览器中输入URL www.sample.com，由于它只是对页面的简单请求无需对数据库动进行动态请求，所以它不存在SQL Injection，当我们输入www.sample.com?testid=23时，我们在URL中传递变量testid，并且提供值为23，由于它是对数据库进行动态查询的请求（其中?testid＝23表示数据库查询变量），所以我们可以该URL中嵌入恶意SQL语句。</p>
-<p>防止SQL注入的方法：</p>
-<p>1.永远不要信任用户的输入，要对用户的输入进行校验，可以通过正则表达式，或限制长度，对单引号和双”-“进行转换等。</p>
-<p>2.永远不要使用动态拼装SQL，可以使用参数化的SQL或者直接使用存储过程进行数据查询存取。</p>
-<p>3.永远不要使用管理员权限的数据库连接，为每个应用使用单独的权限有限的数据库连接。</p>
-<p>4.不要把机密信息明文存放，请加密或者hash掉密码和敏感的信息。</p>
-<p>5.应用的异常信息应该给出尽可能少的提示，最好使用自定义的错误信息对原始错误信息进行包装，把异常信息存放在独立的表中。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql注入/">sql注入</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络攻击/">网络攻击</a></li></ul>
-	</div>
-
       
 
       
