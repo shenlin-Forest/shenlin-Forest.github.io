@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 13.33px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/异步加载，延迟加载/" style="font-size: 10px;">异步加载，延迟加载</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
+						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 13.33px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/异步加载，延迟加载/" style="font-size: 10px;">异步加载，延迟加载</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
 					</div>
 				</section>
 				
@@ -191,6 +191,83 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-简洁HTML5自定义属性dataset" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/13/简洁HTML5自定义属性dataset/" class="article-date">
+  	<time datetime="2016-05-13T01:57:20.000Z" itemprop="datePublished">2016-05-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/13/简洁HTML5自定义属性dataset/">简洁HTML5自定义属性dataset</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="简介HTML5自定义属性dataset">简介HTML5自定义属性dataset</h1><ul>
+<li>在写HTML代码时，通常需要在DOM结构中为JS预留数据钩子，这些钩子通常是这样实现的：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"test"</span> url=<span class="string">"xxx"</span>&gt;xx&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+<p>HTML5更好的规范了这种使用方式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"test"</span> data-url=<span class="string">"xxx"</span>&gt;xx&lt;<span class="regexp">/div&gt;d</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"day2-meal-expense"</span> </span><br><span class="line">     data-drink=<span class="string">"coffee"</span> data-food=<span class="string">"sushi"</span> data-meal=<span class="string">"lunch"</span> &gt;￥<span class="number">20.12</span>&lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>优点：</li>
+</ul>
+<p>（1）<strong>便于获取多个自定义属性</strong>，dataset不是典型意义上的javascript对象，而是个DOMStringMap对象，DOMStringMap是HTML5一种新的含有多个名-值对的交互变量；</p>
+<p>（2）使用dataset操作data要比使用getAttribute稍慢些，但如果只是处理少量的data数据，这种速度上的差异造成的影响是基本没有的。另外，使用dataset操作自定义属性要比其他类似getAttribute的形式<strong>更简洁，更具可读性和可维护性</strong></p>
+<ul>
+<li>在CSS中的data属性：</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"mm"</span> data-name=<span class="string">"阿关"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>设置CSS时：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.mm[data-name=<span class="string">"阿关"</span>]&#123;</span><br><span class="line">    <span class="comment">//css样式</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>另外看到张大大一篇不错的博文，[点击我跳转]{<a href="http://www.zhangxinxu.com/wordpress/2011/06/html5自定义属性对象dataset简介/}" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2011/06/html5自定义属性对象dataset简介/}</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-异步加载和延迟加载" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -656,83 +733,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql注入/">sql注入</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络攻击/">网络攻击</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-jQuery插件：jqzoom" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/07/jQuery插件：jqzoom/" class="article-date">
-  	<time datetime="2015-12-07T09:47:27.000Z" itemprop="datePublished">2015-12-07</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/07/jQuery插件：jqzoom/">jQuery插件：jqzoom</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##jQuery插件之jqzoom</p>
-<p>jqzoom是一款基于jQuery的图片方法插件。</p>
-<p>使用方法：</p>
-<p>1.引入jQuery与jqzoom,jqzoom.css</p>
-<p>2.准备两张一大一小大小相同的图片，小图片放在img标签的”src”属性里，给img标签加个a标签，a标签的”href”属性链向大图片
-　　　　　</p>
-<p>参数说明：</p>
-<p>zoomWidht:　　小图片所选区域的宽度。</p>
-<p>zoomHeight:　  小图片所选区域的高度。</p>
-<p>zoomType:　　 默认值为standard。如果设为reverse，在小图片仲，移入鼠标时，所选区域高亮，非选中区域淡灰色。</p>
-<p>xOffset:　　　　放大后的图片与小图片间的X(横坐标)距离。</p>
-<p>yOffset:　　　　放大后的图片与小图片间的Y(纵坐标)距离。</p>
-<p>position:　　　  放大后的图片相对原图片的位置，默认为”right”,还可设置为”left”,”top”,”bottom”。</p>
-<p>lens:　　　　　　布尔值，表示是否显示小图片中的选中区域，默认值为”true”,如果设为”false”，则放大后的图片上面不会出现主题字样。</p>
-<p>imageOpacity:　当zoomType的值为”reverse”时，用来设置非选中区域透明度的值。取值范围在(0.0-1.0)间。</p>
-<p>preloadImages：布尔值，表示是否重新加载大图像。</p>
-<p>preloadText：　 重新加载大图像时，小图像显示的文本说明。</p>
-<p>title：　　　　　 大图像顶部是否显示<a>标签里的title。</a></p>
-<p>showEffect:　　 大图像加载时的特效，可选值:”show”表示直接显示，”fadein”由透明度渐变载入效果。</p>
-<p>hideEffect：　　 大图像隐藏特效，可选值：”hide”表示直接隐藏，”fadeout”透明度渐变隐藏。　　</p>
-<p>fadeinSpeed:　　当大图像的载入特效设为”fadein”时，此属性可设置特效的时间，可选值为’fast’,’slow’,number分别代表，快慢，毫秒数。</p>
-<p>fadtoutSpeed:　 当大图像的隐藏特效设为”fadeout”时，此属性可设置特效载的时间，可选值为’fast’,’slow’,number分别代表，快慢，毫秒数。</p>
-<p><a href="http://www.cnblogs.com/kissdodog/archive/2012/12/15/2819887.html" target="_blank" rel="external">原文链接</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery插件/">jQuery插件</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jqzoom/">jqzoom</a></li></ul>
 	</div>
 
       
