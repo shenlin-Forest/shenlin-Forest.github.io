@@ -3,17 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: jQuery | Shenlin&#39;s Blog</title>
+  <title>三个编码字符串的方法 | Shenlin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shenlin's Blog">
-<meta property="og:url" content="http://yoursite.com/tags/jQuery/index.html">
+  <meta name="description" content="escape()、encodeURI()、encodeURIComponent()区别js中有三个可以对字符串编码的函数,分别是:escape,encodeURI,encodeURIComponent,相应3个解码函 数:unescape,decodeURI,decodeURIComponent 。
+下⾯面简单介绍⼀一下它们的区别
+escape()函数定义和⽤法:
+escape() 函数可对字符串">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三个编码字符串的方法">
+<meta property="og:url" content="http://yoursite.com/2016/05/16/三个编码字符串的方法/index.html">
 <meta property="og:site_name" content="Shenlin's Blog">
-<meta property="og:description">
+<meta property="og:description" content="escape()、encodeURI()、encodeURIComponent()区别js中有三个可以对字符串编码的函数,分别是:escape,encodeURI,encodeURIComponent,相应3个解码函 数:unescape,decodeURI,decodeURIComponent 。
+下⾯面简单介绍⼀一下它们的区别
+escape()函数定义和⽤法:
+escape() 函数可对字符串">
+<meta property="og:updated_time" content="2016-05-16T04:30:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shenlin's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="三个编码字符串的方法">
+<meta name="twitter:description" content="escape()、encodeURI()、encodeURIComponent()区别js中有三个可以对字符串编码的函数,分别是:escape,encodeURI,encodeURIComponent,相应3个解码函 数:unescape,decodeURI,decodeURIComponent 。
+下⾯面简单介绍⼀一下它们的区别
+escape()函数定义和⽤法:
+escape() 函数可对字符串">
   
     <link rel="alternative" href="/atom.xml" title="Shenlin&#39;s Blog" type="application/atom+xml">
   
@@ -190,53 +200,136 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-三个编码字符串的方法" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/05/13/jquery中获取宽度高度方法区别/" class="archive-article-date">
-  	<time datetime="2016-05-13T02:21:23.000Z" itemprop="datePublished">5月 13</time>
+    <div class="article-meta">
+      <a href="/2016/05/16/三个编码字符串的方法/" class="article-date">
+  	<time datetime="2016-05-16T04:30:15.000Z" itemprop="datePublished">2016-05-16</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/13/jquery中获取宽度高度方法区别/">jquery中获取宽度高度方法区别</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      三个编码字符串的方法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="escape()、encodeURI()、encodeURIComponent()区别">escape()、encodeURI()、encodeURIComponent()区别</h2><p>js中有三个可以对字符串编码的函数,分别是:escape,encodeURI,encodeURIComponent,相应3个解码函 数:unescape,decodeURI,decodeURIComponent 。</p>
+<p>下⾯面简单介绍⼀一下它们的区别</p>
+<h3 id="escape()函数">escape()函数</h3><p>定义和⽤法:</p>
+<p>escape() 函数可对字符串进⾏行编码,这样就可以在所有的计算机上读取该字符串。</p>
+<p>语法:</p>
+<p>escape(string)</p>
+<p>参数描述:</p>
+<p>string 必需。要被转义或编码的字符串。<br>返回值：</p>
+<p>已编码的 string 的副本。其中某些字符被替换成了十六进制的转义序列。</p>
+<p>说明：</p>
+<p><strong>该⽅方法不会对 ASCII 字⺟母和数字进⾏行编码,也不会对下⾯面这些 ASCII 标点符号进⾏行编码: - _ . ! ~ * ‘ ( ) 。其他所有的字符都会被转义序列替换</strong>。</p>
+<h3 id="encodeURI()函数">encodeURI()函数</h3><p>定义和⽤法：</p>
+<p>encodeURI() 函数可把字符串作为 URI 进⾏行编码。</p>
+<p>语法：</p>
+<p>encodeURI(URIstring)</p>
+<p>参数描述：</p>
+<p>URIstring 必需。⼀个字符串,含有 URI 或其他要编码的⽂文本。</p>
+<p>返回值：</p>
+<p>URIstring的副本,其中的某些字符将被⼗六进制的转义序列进⾏行替 换。<br>￼<br>说明：</p>
+<p>该⽅法不会对 ASCII 字母和数字进⾏编码,也不会对这些 ASCII 标点符号进⾏行编码: - _ . ! ~ * ‘ ( ) 。<br>该⽅法的⺫的是对 URI 进⾏完整的编码,因此对以下在 URI 中具有特殊含义的 ASCII 标点符号,encodeURI() 函数是不会进行转义 的:;/?:@&amp;=+$,# </p>
+<h3 id="encodeURIComponent()_函数">encodeURIComponent() 函数</h3><p>定义和用法：</p>
+<p>encodeURIComponent() 函数可把字符串作为 URI 组件进行编码。</p>
+<p>语法：</p>
+<p>encodeURIComponent(URIstring)</p>
+<p>参数描述:</p>
+<p>URIstring 必需。⼀个字符串,含有 URI 组件或其他要编码的⽂本。</p>
+<p>返回值:</p>
+<p>URIstring 的副本,其中的某些字符将被⼗六进制的转义序列进⾏替换。</p>
+<p>说明:</p>
+<p>该⽅法不会对 ASCII 字母和数字进⾏行编码,也不会对这些 ASCII 标 点符号进⾏行编码: - _ . ! ~ * ‘ ( ) 。<br>其他字符(⽐比如 :;/?:@&amp;=+$,# 这些⽤用于分隔 URI 组件的标点 符号),都是由⼀个或多个十六进制的转义序列替换的。</p>
+<p>提⽰和注释:</p>
+<p>提示:请注意 encodeURIComponent() 函数 与 encodeURI() 函 数的区别之处,前者假定它的参数是 URI 的一部分(⽐如协议、主机名、路径或查询字符串)。因此 encodeURIComponent() 函数 将转义⽤用于分隔 URI 各个部分的标点符号。</p>
+<p>4 总结:</p>
+<p>通过对三个函数的分析,我们可以知道:<strong>escape()除了ASCII 字母、数字和特定的符号外,对传进来的字符串全部进⾏行转义编码,因此如果想对URL编码,最好不要使用此方法。而encodeURI()用于编码整个URI,因为URI中的合法字符都不会被编码转换。encodeURIComponent()方法在编码单个URIComponent(指请求 参 数)应当是最常用的,它可以讲参数中的中⽂文、特殊字符进⾏行转义,⽽不会影响整个URL</strong>。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/13/jquery中获取宽度高度方法区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jquery中获取宽度高度方法区别</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="三个编码字符串的方法" data-title="三个编码字符串的方法" data-url="http://yoursite.com/2016/05/16/三个编码字符串的方法/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"shenlin-notes"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -262,9 +355,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
