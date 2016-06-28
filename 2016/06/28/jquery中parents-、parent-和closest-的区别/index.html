@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | Shenlin&#39;s Blog</title>
+  <title>jquery中parents()、parent()和closest()的区别 | Shenlin&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shenlin's Blog">
-<meta property="og:url" content="http://yoursite.com/archives/page/3/index.html">
+  <meta name="description" content="jQuery中向上遍历DOM树中parents()、parent()和closest()的区别在jQuery向上遍历DOM树的API中，有parents()、parent()和closest(),他们的区别是这样的:
+parents([selector])本方法用于选择给定jQuery对象中包含的DOM元素或者DOM元素集的祖先节点，并将这些节点包装成jQuery对象返回，返回的节点集是以从里到外">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jquery中parents()、parent()和closest()的区别">
+<meta property="og:url" content="http://yoursite.com/2016/06/28/jquery中parents-、parent-和closest-的区别/index.html">
 <meta property="og:site_name" content="Shenlin's Blog">
-<meta property="og:description">
+<meta property="og:description" content="jQuery中向上遍历DOM树中parents()、parent()和closest()的区别在jQuery向上遍历DOM树的API中，有parents()、parent()和closest(),他们的区别是这样的:
+parents([selector])本方法用于选择给定jQuery对象中包含的DOM元素或者DOM元素集的祖先节点，并将这些节点包装成jQuery对象返回，返回的节点集是以从里到外">
+<meta property="og:updated_time" content="2016-06-28T03:10:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shenlin's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="jquery中parents()、parent()和closest()的区别">
+<meta name="twitter:description" content="jQuery中向上遍历DOM树中parents()、parent()和closest()的区别在jQuery向上遍历DOM树的API中，有parents()、parent()和closest(),他们的区别是这样的:
+parents([selector])本方法用于选择给定jQuery对象中包含的DOM元素或者DOM元素集的祖先节点，并将这些节点包装成jQuery对象返回，返回的节点集是以从里到外">
   
     <link rel="alternative" href="/atom.xml" title="Shenlin&#39;s Blog" type="application/atom+xml">
   
@@ -190,260 +194,129 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-jquery中parents-、parent-和closest-的区别" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2016/06/28/jquery中parents-、parent-和closest-的区别/" class="article-date">
+  	<time datetime="2016-06-28T02:50:00.000Z" itemprop="datePublished">2016-06-28</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jquery中parents()、parent()和closest()的区别
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/30/href-与javascript-void-0-的区别/" class="archive-article-date">
-  	<time datetime="2015-11-30T04:11:30.000Z" itemprop="datePublished">11月 30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/30/href-与javascript-void-0-的区别/"> href=# 与javascript:void(0)的区别</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="jQuery中向上遍历DOM树中parents()、parent()和closest()的区别">jQuery中向上遍历DOM树中parents()、parent()和closest()的区别</h2><p>在jQuery向上遍历DOM树的API中，有parents()、parent()和closest(),他们的区别是这样的:</p>
+<h3 id="parents([selector])">parents([selector])</h3><p>本方法用于选择给定jQuery对象中包含的DOM元素或者DOM元素集的祖先节点，并将这些节点包装成jQuery对象返回，返回的节点集是以从里到外的顺序排序的。</p>
+<p>同时，本方法还接受一个字符串选择器，用于从返回的节点集中筛选符合选择器的子元素集。</p>
+<h3 id="parent([selector])">parent([selector])</h3><p>本方法用于选择给定jQuery对象中包含的DOM元素或者DOM元素集的父节点。它和parents()不同的是，它只向上搜索一层，而parents()会搜索整个DOM树。</p>
+<p>本方法也可以接受一个字符串选择器，用于筛选返回的元素。</p>
+<h3 id="closest(selector)">closest(selector)</h3><p>本方法用于向上遍历jQuery对象中包含的DOM元素或者DOM元素集的祖先节点，直到找到符合selector选择器的节点为止。</p>
+<h3 id="区别">区别</h3><p>closest()从自身开始向上遍历，直到找到一个适合的节点，返回的jQuery对象包含0个或者1个对象；</p>
+<p>parents()从自身的父节点开始向上遍历，返回所有祖先节点，并根据选择器对这些节点进行筛选，最终返回的jQuery对象可能包含0、1或者多个对象。</p>
+<p>举例：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span>a test document<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">p</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">b</span>&gt;</span>My parents<span class="tag">&lt;/<span class="title">b</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p>$(‘b’).parents()将返回：由span、p、div、body、html等元素构造的jQuery对象；</p>
+<p>$(‘b’).parent()将返回：由span构造的jQuery对象；</p>
+<p>$(‘b’).closest(‘div’)将返回：由div构造的jQuery对象。</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web常见知识点/">web常见知识点</a></li></ul>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/16/三个编码字符串的方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">三个编码字符串的方法</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/27/工作经验交流会总结/" class="archive-article-date">
-  	<time datetime="2015-11-27T15:32:01.000Z" itemprop="datePublished">11月 27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/27/工作经验交流会总结/">工作经验交流会总结</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/制定计划/">制定计划</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端开发/">前端开发</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
-	</div>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="jquery中parents-、parent-和closest-的区别" data-title="jquery中parents()、parent()和closest()的区别" data-url="http://yoursite.com/2016/06/28/jquery中parents-、parent-和closest-的区别/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"shenlin-notes"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/26/$(this)和this的区别/" class="archive-article-date">
-  	<time datetime="2015-11-26T15:17:29.000Z" itemprop="datePublished">11月 26</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/25/随笔/" class="archive-article-date">
-  	<time datetime="2015-11-25T12:15:31.000Z" itemprop="datePublished">11月 25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/25/随笔/">随笔</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/2015年/">2015年</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活记录/">生活记录</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/25/快速了解CSS的vertical-align属性/" class="archive-article-date">
-  	<time datetime="2015-11-24T16:01:07.000Z" itemprop="datePublished">11月 25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/25/快速了解CSS的vertical-align属性/">快速了解CSS的vertical-align属性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web常见知识点/">web常见知识点</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/24/CSS盒模型和display属性/" class="archive-article-date">
-  	<time datetime="2015-11-23T16:08:37.000Z" itemprop="datePublished">11月 24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/24/CSS盒模型和display属性/">CSS盒模型和display属性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web常见知识点/">web常见知识点</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/15/第一篇博客/" class="archive-article-date">
-  	<time datetime="2015-11-15T09:24:16.000Z" itemprop="datePublished">11月 15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/15/第一篇博客/">第一篇博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人/">个人</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/15/hello-world/" class="archive-article-date">
-  	<time datetime="2015-11-15T08:53:59.000Z" itemprop="datePublished">11月 15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
-  
 
 </div>
       <footer id="footer">
@@ -469,8 +342,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false

@@ -112,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 16.67px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/异步加载，延迟加载/" style="font-size: 10px;">异步加载，延迟加载</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
+						<a href="/tags/2015年/" style="font-size: 10px;">2015年</a> <a href="/tags/AMD/" style="font-size: 10px;">AMD</a> <a href="/tags/CMD/" style="font-size: 10px;">CMD</a> <a href="/tags/CORS跨域/" style="font-size: 10px;">CORS跨域</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JSONP/" style="font-size: 10px;">JSONP</a> <a href="/tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="/tags/SeaJS/" style="font-size: 10px;">SeaJS</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/jQuery/" style="font-size: 13.33px;">jQuery</a> <a href="/tags/jQuery插件/" style="font-size: 10px;">jQuery插件</a> <a href="/tags/javascript/" style="font-size: 13.33px;">javascript</a> <a href="/tags/jqzoom/" style="font-size: 10px;">jqzoom</a> <a href="/tags/js/" style="font-size: 16.67px;">js</a> <a href="/tags/sql注入/" style="font-size: 10px;">sql注入</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/web常见知识点/" style="font-size: 20px;">web常见知识点</a> <a href="/tags/个人/" style="font-size: 10px;">个人</a> <a href="/tags/制定计划/" style="font-size: 10px;">制定计划</a> <a href="/tags/前端开发/" style="font-size: 10px;">前端开发</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/异步加载，延迟加载/" style="font-size: 10px;">异步加载，延迟加载</a> <a href="/tags/总结/" style="font-size: 13.33px;">总结</a> <a href="/tags/模块打包/" style="font-size: 16.67px;">模块打包</a> <a href="/tags/生活记录/" style="font-size: 10px;">生活记录</a> <a href="/tags/网络攻击/" style="font-size: 10px;">网络攻击</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a>
 					</div>
 				</section>
 				
@@ -191,6 +191,87 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-jquery中parents-、parent-和closest-的区别" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/28/jquery中parents-、parent-和closest-的区别/" class="article-date">
+  	<time datetime="2016-06-28T02:50:00.000Z" itemprop="datePublished">2016-06-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/28/jquery中parents-、parent-和closest-的区别/">jquery中parents()、parent()和closest()的区别</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="jQuery中向上遍历DOM树中parents()、parent()和closest()的区别">jQuery中向上遍历DOM树中parents()、parent()和closest()的区别</h2><p>在jQuery向上遍历DOM树的API中，有parents()、parent()和closest(),他们的区别是这样的:</p>
+<h3 id="parents([selector])">parents([selector])</h3><p>本方法用于选择给定jQuery对象中包含的DOM元素或者DOM元素集的祖先节点，并将这些节点包装成jQuery对象返回，返回的节点集是以从里到外的顺序排序的。</p>
+<p>同时，本方法还接受一个字符串选择器，用于从返回的节点集中筛选符合选择器的子元素集。</p>
+<h3 id="parent([selector])">parent([selector])</h3><p>本方法用于选择给定jQuery对象中包含的DOM元素或者DOM元素集的父节点。它和parents()不同的是，它只向上搜索一层，而parents()会搜索整个DOM树。</p>
+<p>本方法也可以接受一个字符串选择器，用于筛选返回的元素。</p>
+<h3 id="closest(selector)">closest(selector)</h3><p>本方法用于向上遍历jQuery对象中包含的DOM元素或者DOM元素集的祖先节点，直到找到符合selector选择器的节点为止。</p>
+<h3 id="区别">区别</h3><p>closest()从自身开始向上遍历，直到找到一个适合的节点，返回的jQuery对象包含0个或者1个对象；</p>
+<p>parents()从自身的父节点开始向上遍历，返回所有祖先节点，并根据选择器对这些节点进行筛选，最终返回的jQuery对象可能包含0、1或者多个对象。</p>
+<p>举例：</p>
+<pre><code><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">title</span>&gt;</span>a test document<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">p</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">span</span>&gt;</span>
+            <span class="tag">&lt;<span class="title">b</span>&gt;</span>My parents<span class="tag">&lt;/<span class="title">b</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+        <span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</code></pre><p>$(‘b’).parents()将返回：由span、p、div、body、html等元素构造的jQuery对象；</p>
+<p>$(‘b’).parent()将返回：由span构造的jQuery对象；</p>
+<p>$(‘b’).closest(‘div’)将返回：由div构造的jQuery对象。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-三个编码字符串的方法" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -724,46 +805,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="腾讯笔试练习题：">腾讯笔试练习题：</h2><h3 id="填充代码，使mySort能使传入的参数按照从小到大的顺序显示出来">填充代码，使mySort能使传入的参数按照从小到大的顺序显示出来</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">mySort</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> tags = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"></span><br><span class="line">		<span class="comment">//你的代码</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="built_in">arguments</span>.length;i++)&#123;</span><br><span class="line">			tags.push(<span class="built_in">arguments</span>[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		tags.sort(<span class="function"><span class="keyword">function</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">			<span class="keyword">return</span> num1-num2;</span><br><span class="line">			<span class="comment">// return num2-num1;//从大到小</span></span><br><span class="line">		&#125;)</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> tags;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">var</span> result = mySort(<span class="number">30</span>,<span class="number">2</span>,<span class="number">0</span>,<span class="number">45</span>,<span class="number">100</span>,<span class="number">27</span>);</span><br><span class="line">	<span class="built_in">console</span>.log(result);</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-冒泡、快排和插排的js实现" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/06/冒泡、快排和插排的js实现/" class="article-date">
-  	<time datetime="2016-04-06T04:31:15.000Z" itemprop="datePublished">2016-04-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="冒泡排序、快排、插排的js实现">冒泡排序、快排、插排的js实现</h3><p>直接上代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"><span class="comment">//冒泡排序  </span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortBubble</span>(<span class="params">array</span>)</span>&#123;  </span><br><span class="line">  <span class="keyword">var</span> i,j,len=array.length,tmp;  </span><br><span class="line">  <span class="keyword">for</span>(i=len;i &gt; <span class="number">0</span>;i--)&#123;  </span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">0</span>;j &lt; i;j++)&#123;  </span><br><span class="line">      <span class="keyword">if</span>(array[j]&gt;array[j+<span class="number">1</span>])&#123;  </span><br><span class="line">         tmp=array[j+<span class="number">1</span>];  </span><br><span class="line">         array[j+<span class="number">1</span>]=array[j];  </span><br><span class="line">         array[j]=tmp;  </span><br><span class="line">      &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">  &#125;  </span><br><span class="line">  <span class="keyword">return</span> array;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="keyword">var</span> array  = [<span class="number">20</span>,<span class="number">10</span>,<span class="number">30</span>,<span class="number">50</span>,<span class="number">7</span>,<span class="number">0</span>];</span><br><span class="line"><span class="built_in">console</span>.log(sortBubble(array));</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="comment">//快排</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(arr.length &lt; <span class="number">1</span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> arr;<span class="comment">//如果数组中只有一个数字，那就直接返回</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">var</span> num = <span class="built_in">Math</span>.floor(arr.length/<span class="number">2</span>);<span class="comment">//找到中间数的索引值，若是浮点数，则向上取整</span></span><br><span class="line">		<span class="keyword">var</span> numValue = arr.splice(num,<span class="number">1</span>);<span class="comment">//找到中间数的值</span></span><br><span class="line">		<span class="keyword">var</span> left = [];</span><br><span class="line">		<span class="keyword">var</span> right = [];</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[i] &lt; numValue)&#123;</span><br><span class="line">				left.push(arr[i]);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> &#123;</span><br><span class="line">				right.push(arr[i]);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> quickSort(left).concat(numValue,quickSort(right));<span class="comment">//递归不断重复比较</span></span><br><span class="line">	&#125;</span><br><span class="line">    <span class="built_in">console</span>.log(quickSort([<span class="number">32</span>,<span class="number">45</span>,<span class="number">37</span>,<span class="number">16</span>,<span class="number">2</span>,<span class="number">87</span>,<span class="number">4</span>]));</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="comment">//插入排序</span></span><br><span class="line">		<span class="function"><span class="keyword">function</span> <span class="title">insertionSort</span>(<span class="params">arr</span>)</span>&#123;</span><br><span class="line">			<span class="keyword">var</span> i,j,len = arr.length,key;</span><br><span class="line">			<span class="comment">// j从0或者1开始都行</span></span><br><span class="line">			<span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;len;j++)&#123;</span><br><span class="line">				key = arr[j];</span><br><span class="line">				i = j-<span class="number">1</span>;</span><br><span class="line">				<span class="keyword">while</span>(i &gt;= <span class="number">0</span> &amp;&amp; arr[i]&gt;key)&#123;</span><br><span class="line">					arr[i+<span class="number">1</span>]=arr[i];</span><br><span class="line">					i=i-<span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				arr[i+<span class="number">1</span>] = key;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">return</span> arr;</span><br><span class="line">		&#125;</span><br><span class="line">		arr=[<span class="number">20</span>,<span class="number">1</span>,<span class="number">23</span>,<span class="number">44</span>,<span class="number">53</span>,<span class="number">12</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">0</span>,<span class="number">7</span>];</span><br><span class="line">		<span class="built_in">console</span>.log(insertionSort(arr));</span><br><span class="line">	</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
       
     </div>
     
